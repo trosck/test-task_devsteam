@@ -14,7 +14,7 @@ export const setCurrentImage = image => {
 	}
 }
 
-export const getImageList = ( ) => async dispatch => {
+export const getImageList = () => async dispatch => {
 	function onSuccess(res) {
 		dispatch({ type: "IMAGE_LIST_FETCHED", payload: res });
 		return res;

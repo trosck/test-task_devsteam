@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { 
+import {
 	View,
 	Image,
 	Text,
 	StyleSheet
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { connect } from "react-redux";
 
 const ImageScreen = (props) => {

@@ -8,16 +8,16 @@ import {
 } from "react-native";
 import ImageItem from "../components/ImageItem";
 import { connect } from "react-redux";
-import { 
-	setImageList, 
+import {
+	setImageList,
 	setCurrentImage,
 	getImageList
-} from "../redux/actions"; 
- 
+} from "../redux/actions";
+
 const HomeScreen = ({ navigation, ...props }) => {
 	const [error, setError] = useState([]);
 
-	useEffect(( ) => {
+	useEffect(() => {
 		props.getImageList()
 	}, []);
 
@@ -36,7 +36,7 @@ const HomeScreen = ({ navigation, ...props }) => {
 				<Text>Что то пошло не так: {error}</Text>
 			) : null}
 
-			<FlatList 
+			<FlatList
 				data={props.imageList}
 				renderItem={({ item }) => (
 					<ImageItem
@@ -71,10 +71,10 @@ const mapStateToProps = state => {
 }
 
 export default connect(
-	mapStateToProps, 
-	{ 
-		getImageList, 
-		setImageList, 
+	mapStateToProps,
+	{
+		getImageList,
+		setImageList,
 		setCurrentImage,
 	}
 )(HomeScreen);

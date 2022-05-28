@@ -15,8 +15,8 @@ const ImageItem = (props) => {
 				<Image
 					style={styles.image}
 					source={{
-			        	uri: props.image
-			        }}
+						uri: props.image
+					}}
 				/>
 			</TouchableOpacity>
 
